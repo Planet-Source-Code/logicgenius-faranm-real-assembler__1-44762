@@ -1,0 +1,8 @@
+* Program : Printing simple text
+
+MOV AH, 09
+MOV DX, 010B
+INT 21
+MOV AH, 4C
+INT 21
+DB 'How are you?' '$'
