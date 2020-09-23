@@ -1,0 +1,28 @@
+* Program :  Hiding a file. The name of the file must not exceed 8 chars otherwise use DOS short name.
+   Demonstarate : Adding and Removing +h attribute
+
+------Cut here-----
+mov al, 01
+mov ah, 43
+mov cx, 02
+mov dx, 112
+int 21
+mov al, 00
+mov ah, 4c
+int 21
+db 'Assemb~1.vbp' '$' 0
+------Cut here-----
+
+* Program : UnHiding a file
+
+------Cut here-----
+mov al, 01
+mov ah, 43
+mov cx, 00
+mov dx, 112
+int 21
+mov al, 00
+mov ah, 4c
+int 21
+db 'Assemb~1.vbp' '$' 0
+------Cut here-----
